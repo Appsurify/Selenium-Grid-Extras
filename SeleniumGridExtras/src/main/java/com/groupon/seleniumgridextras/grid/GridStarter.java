@@ -185,6 +185,7 @@ public class GridStarter {
 
         StringBuilder command = new StringBuilder();
         command.append(getJavaExe() + " ");
+		command.append(RuntimeConfig.getConfig().getGridJvmXOptions());
         command.append(RuntimeConfig.getConfig().getGridJvmOptions());
 
         if (windows) {
